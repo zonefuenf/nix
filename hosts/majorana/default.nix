@@ -3,15 +3,9 @@
   services.nix-daemon.enable = true;
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  programs.zsh = {
-    enable = true;
-    autocd = true;
-    enableAutosuggestions = true;
-    enableCompletion = true;
-    initExtra = ''
-      eval "$(starship init zsh)";
-    '';
-  };
+
+  programs.zsh.enable = true;
+
   home-manager.users.pleser = { pkgs, ... }: {
     home.stateVersion = "22.05";
     home.packages = with pkgs; [
@@ -22,9 +16,18 @@
         tmux
         tree-sitter
     ];
+    programs.zsh = {
+      enable = true;
+      enableAutosuggestions = true;
+      enableCompletion = true;
+      initExtra = ''
+        eval "$(starship init zsh)";
+      '';
+    };
   };
+
   homebrew = {
-    onActivation.enable = true;
+    enable = true;
     onActivation.autoUpdate = true;
     casks = [
       "adobe-creative-cloud"
