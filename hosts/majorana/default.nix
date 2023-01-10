@@ -36,6 +36,7 @@
       enableSyntaxHighlighting = true;
       initExtra = ''
         export CLICOLOR=1
+        eval `/usr/libexec/path_helper`
         eval "$(starship init zsh)";
       '';
     };
