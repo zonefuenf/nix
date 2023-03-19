@@ -81,7 +81,6 @@
         "microsoft-excel"
         "microsoft-word"
         "soulver"	
-        "zoom"
         "carbon-copy-cloner"
         "hazel"	
         "soundsource"
@@ -92,7 +91,6 @@
       iMovie = 408981434;
       "Brother P-touch Editor" = 1453365242;
       AusweisApp2 = 948660805;
-      Tweetbot = 1384080005;
       PCalc = 403504866;
       Pages = 409201541;
       Numbers = 409203825;
